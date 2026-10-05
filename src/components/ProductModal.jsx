@@ -51,6 +51,10 @@ export default function ProductModal({ product, onClose, lang, t }) {
             <img
               src={product.image}
               alt={title}
+              loading="lazy"
+              decoding="async"
+              width="800"
+              height="600"
               className="w-full h-full object-cover object-center"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#08090C] via-transparent to-transparent md:hidden"></div>

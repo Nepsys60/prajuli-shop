@@ -147,6 +147,10 @@ export default function CollectionShowcase({ lang, t, onSelectProduct }) {
                     <img
                       src={item.image}
                       alt={title}
+                      loading="lazy"
+                      decoding="async"
+                      width="800"
+                      height="600"
                       className="w-full h-full object-cover object-center group-hover:scale-108 transition-transform duration-700 ease-out"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#0C0E14] via-transparent to-black/30"></div>

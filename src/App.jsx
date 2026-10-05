@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, lazy, Suspense } from 'react';
 import { translations } from './data/translations';
 import Header from './components/Header';
 import Hero from './components/Hero';
@@ -8,8 +8,10 @@ import BoutiqueExperience from './components/BoutiqueExperience';
 import DriveToStore from './components/DriveToStore';
 import Reviews from './components/Reviews';
 import Footer from './components/Footer';
-import ProductModal from './components/ProductModal';
 import ChatbotWidget from './components/ChatbotWidget';
+
+// Code-split heavy modal to keep initial bundle tiny and fast
+const ProductModal = lazy(() => import('./components/ProductModal'));
 
 export default function App() {
   const [lang, setLang] = useState(() => {
@@ -58,17 +60,19 @@ export default function App() {
       {/* Footer */}
       <Footer lang={lang} t={t} />
 
-      {/* Modals & Overlays */}
+      {/* Lazy-loaded Product Details Modal */}
       {selectedProduct && (
-        <ProductModal
-          product={selectedProduct}
-          onClose={() => setSelectedProduct(null)}
-          lang={lang}
-          t={t}
-        />
+        <Suspense fallback={null}>
+          <ProductModal
+            product={selectedProduct}
+            onClose={() => setSelectedProduct(null)}
+            lang={lang}
+            t={t}
+          />
+        </Suspense>
       )}
 
-      {/* Integrated Antigravity Style Assistant Chatbot */}
+      {/* Integrated Parajuli Style Assistant Chatbot */}
       <ChatbotWidget lang={lang} t={t} />
     </div>
   );

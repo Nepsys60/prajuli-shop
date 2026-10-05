@@ -17,8 +17,12 @@ export default function Hero({ lang, t }) {
       {/* Background Image with bespoke luxury vignette overlay */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/images/hero_boutique.jpg"
+          src="/images/hero_boutique.webp"
           alt="Parajuli Fabric Store Boutique Interior Pokhara"
+          fetchPriority="high"
+          decoding="async"
+          width="1600"
+          height="900"
           className="w-full h-full object-cover object-center transform scale-105 transition-transform duration-1000"
         />
         {/* Multilayered dark espresso & charcoal gradients for extreme legibility and cinematic depth */}
