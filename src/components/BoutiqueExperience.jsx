@@ -79,7 +79,7 @@ export default function BoutiqueExperience({ lang, t }) {
                   : "हाम्रो जिरो किमी स्टोरमा आएर थानका थान कपडाहरू आफ्नै अगाडि हेर्नुहोस्, आफ्नो शरीरमा ड्रेप गरेर सुहाउँछ-सुहाउँदैन जाँच्नुहोस् र उत्तम सिलाइ परामर्श लिनुहोस्।"}
               </p>
               
-              <div className="flex flex-wrap gap-4 text-xs text-[#EAE6DF]">
+              <div className="flex flex-wrap gap-4 text-xs text-[#EAE6DF] mb-5">
                 <div className="flex items-center space-x-2">
                   <CheckCircle className="w-4 h-4 text-[#D4AF37]" />
                   <span>{isEn ? "Complimentary Tea & Styling Consultation" : "निःशुल्क चिया तथा स्टाइलिङ सल्लाह"}</span>
@@ -88,6 +88,15 @@ export default function BoutiqueExperience({ lang, t }) {
                   <CheckCircle className="w-4 h-4 text-[#D4AF37]" />
                   <span>{isEn ? "Hassle-free parking at Zero Km" : "जिरो किमीमा सजिलो पार्किङ सुविधा"}</span>
                 </div>
+              </div>
+
+              <div className="inline-flex items-center space-x-2.5 px-4 py-2 rounded-full bg-black/40 border border-[#D4AF37]/30 text-xs text-[#CBC5B8]">
+                <Sparkles className="w-3.5 h-3.5 text-[#D4AF37] flex-shrink-0" />
+                <span>
+                  {isEn 
+                    ? "Curated & guided by proprietors Janak Raj Parajuli & Sita Kumari Poudel" 
+                    : "सञ्चालकहरू जनक राज पराजुली र सीता कुमारी पौडेलद्वारा व्यक्तिगत रूपमा क्युरेट तथा निर्देशित"}
+                </span>
               </div>
             </div>
 

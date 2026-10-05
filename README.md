@@ -55,7 +55,9 @@ npm run build
 
 ---
 
-## 📍 Store Location
-- **Address**: Zero Km, Pokhara-5 (Near Zero Km Chowk), Kaski, Gandaki Province, Nepal
+## 📍 Store & Contact Information
+- **Proprietors**: Janak Raj Parajuli & Sita Kumari Poudel
+- **Email**: [Parajulijanak34@gmail.com](mailto:Parajulijanak34@gmail.com)
 - **Phone / WhatsApp**: +977 9856025496
+- **Address**: Zero Km, Pokhara-5 (Near Zero Km Chowk), Kaski, Gandaki Province, Nepal
 - **Store Hours**: Sunday – Saturday: 10:00 AM – 8:00 PM (Open All 7 Days)

@@ -4,7 +4,9 @@ import {
   MapPin, 
   Clock, 
   Sparkles, 
-  ArrowUp
+  ArrowUp,
+  Mail,
+  Award
 } from 'lucide-react';
 import WhatsAppIcon from './WhatsAppIcon';
 
@@ -70,7 +72,13 @@ export default function Footer({ lang, t }) {
             <p className="text-xs text-[#A89E8D] leading-relaxed font-light">
               {t.footer.about}
             </p>
-            <div className="flex items-center space-x-3 pt-2">
+            <div className="text-xs text-[#CBC5B8] bg-white/[0.03] p-3 rounded-xl border border-white/5">
+              <span className="text-[10px] text-[#D4AF37] uppercase tracking-widest block font-medium mb-0.5">
+                {t.footer.ownersLabel}
+              </span>
+              <span className="text-white font-serif">{t.brand.owners}</span>
+            </div>
+            <div className="flex items-center space-x-3 pt-1">
               {/* Instagram SVG */}
               <a
                 href="https://instagram.com"
@@ -166,9 +174,30 @@ export default function Footer({ lang, t }) {
                   {t.brand.phone}
                 </a>
               </div>
+              <div className="flex items-center space-x-2.5">
+                <Mail className="w-4 h-4 text-[#D4AF37] flex-shrink-0" />
+                <a 
+                  href={`mailto:${t.brand.email}`} 
+                  className="hover:text-white text-[#D4AF37] hover:underline transition-colors break-all"
+                  title={t.footer.emailLabel}
+                >
+                  {t.brand.email}
+                </a>
+              </div>
               <div className="flex items-start space-x-2.5">
                 <Clock className="w-4 h-4 text-[#D4AF37] flex-shrink-0 mt-0.5" />
                 <span>{t.brand.hours}</span>
+              </div>
+              <div className="pt-2.5 border-t border-white/10 flex items-start space-x-2.5">
+                <Award className="w-4 h-4 text-[#D4AF37] flex-shrink-0 mt-0.5" />
+                <div>
+                  <span className="text-[10px] text-[#A89E8D] uppercase tracking-wider block font-medium">
+                    {t.footer.ownersLabel}
+                  </span>
+                  <span className="text-white font-medium">
+                    {t.brand.owners}
+                  </span>
+                </div>
               </div>
             </div>
           </div>

@@ -39,6 +39,12 @@ export const chatbotResponses = {
         actionUrl: "#collections",
         actionText: "Browse Priced Catalog"
       },
+      {
+        tokens: ["owner", "owners", "proprietor", "proprietors", "founder", "founders", "janak", "sita", "parajuli", "poudel", "email", "mail", "contact email"],
+        response: "Parajuli Fabric Store is proudly founded and owned by Janak Raj Parajuli & Sita Kumari Poudel. For direct inquiries, custom orders, or bridal appointments, you can email them directly at Parajulijanak34@gmail.com, call/WhatsApp at +977 9856025496, or meet them at our Zero Km, Pokhara-5 boutique!",
+        actionUrl: "mailto:Parajulijanak34@gmail.com",
+        actionText: "Email Parajulijanak34@gmail.com"
+      },
     ]
   },
 
@@ -81,6 +87,12 @@ export const chatbotResponses = {
         response: "कपडाको मूल्य रु. ९५०/मिटर (मखमली), रु. १,८५०/मिटर (रअ् सिल्क), रु. ३,५००/मिटर (पश्मिना) र सारीहरू रु. १४,००० देखि रु. ४५,००० सम्मका उपलब्ध छन्।",
         actionUrl: "#collections",
         actionText: "मूल्यसहित क्याटलग हेर्नुहोस्"
+      },
+      {
+        tokens: ["सञ्चालक", "मालिक", "संस्थापक", "जनक", "सीता", "पराजुली", "पौडेल", "इमेल", "email", "owner", "proprietor"],
+        response: "पराजुली फेब्रिक स्टोरका संस्थापक तथा सञ्चालकहरू जनक राज पराजुली र सीता कुमारी पौडेल हुनुहुन्छ। प्रत्यक्ष सम्पर्क वा विशेष अर्डरका लागि उहाँहरूलाई सिधै Parajulijanak34@gmail.com मा इमेल गर्न वा +९७७ ९८५६०२५४९६ मा ह्वाट्सएप/फोन गर्न सक्नुहुन्छ!",
+        actionUrl: "mailto:Parajulijanak34@gmail.com",
+        actionText: "इमेल पठाउनुहोस् (Parajulijanak34@gmail.com)"
       },
     ]
   }

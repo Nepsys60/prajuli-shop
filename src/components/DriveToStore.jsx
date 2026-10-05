@@ -6,7 +6,9 @@ import {
   Navigation, 
   Car, 
   Sparkles,
-  ExternalLink 
+  ExternalLink,
+  Mail,
+  Award 
 } from 'lucide-react';
 import WhatsAppIcon from './WhatsAppIcon';
 
@@ -110,6 +112,45 @@ export default function DriveToStore({ lang, t }) {
                     <span className="text-xs text-emerald-400 font-medium">
                       {isEn ? "Open Now for In-Store Consultation" : "स्टोरमा कपडा हेर्न अहिले खुला छ"}
                     </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Proprietorship & Contact Email Card */}
+            <div className="p-6 rounded-2xl glass-panel border border-[#D4AF37]/35 hover:border-[#D4AF37] transition-all bg-gradient-to-br from-[#131622] via-[#171B2A] to-[#0F111A] shadow-xl relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-[radial-gradient(circle_at_top_right,rgba(212,175,55,0.12),transparent_70%)] pointer-events-none"></div>
+              <div className="flex items-start space-x-3.5 relative z-10">
+                <div className="w-10 h-10 rounded-xl bg-[#D4AF37]/15 border border-[#D4AF37]/30 flex items-center justify-center flex-shrink-0 mt-0.5 text-[#D4AF37]">
+                  <Award className="w-5 h-5" />
+                </div>
+                <div className="flex-1">
+                  <div className="flex items-center justify-between mb-1">
+                    <h4 className="text-xs font-semibold uppercase tracking-wider text-[#D4AF37]">
+                      {t.storeVisit.ownersCardTitle}
+                    </h4>
+                    <span className="text-[10px] uppercase tracking-widest text-[#D4AF37] bg-[#D4AF37]/10 border border-[#D4AF37]/30 px-2 py-0.5 rounded-full font-medium">
+                      {t.storeVisit.ownersCardRole}
+                    </span>
+                  </div>
+                  <p className="text-base sm:text-lg text-white font-serif font-medium leading-snug">
+                    {t.storeVisit.ownersCardSubtitle}
+                  </p>
+                  
+                  {/* Contact Email & Note */}
+                  <div className="mt-3 pt-3 border-t border-white/10 space-y-2">
+                    <div className="flex items-center space-x-2">
+                      <Mail className="w-4 h-4 text-[#D4AF37] flex-shrink-0" />
+                      <a 
+                        href={`mailto:${t.brand.email}`}
+                        className="text-xs text-[#D4AF37] hover:text-white transition-colors underline underline-offset-2 break-all font-medium"
+                      >
+                        {t.brand.email}
+                      </a>
+                    </div>
+                    <p className="text-[11px] text-[#A89E8D] font-light leading-relaxed">
+                      {t.storeVisit.ownersCardNote}
+                    </p>
                   </div>
                 </div>
               </div>

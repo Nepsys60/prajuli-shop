@@ -5,7 +5,8 @@ import {
   Globe, 
   Menu, 
   X, 
-  Sparkles
+  Sparkles,
+  Mail
 } from 'lucide-react';
 import WhatsAppIcon from './WhatsAppIcon';
 
@@ -57,16 +58,21 @@ export default function Header({ lang, setLang, t }) {
           </div>
           <div className="flex items-center space-x-4">
             <a 
+              href={`mailto:${t.brand.email}`} 
+              className="hover:text-[#D4AF37] transition-colors flex items-center text-[#CBC5B8]"
+              title="Official Contact Email"
+            >
+              <Mail className="w-3 h-3 mr-1 text-[#D4AF37]" />
+              {t.brand.email}
+            </a>
+            <span className="text-[#C5A880]/30">|</span>
+            <a 
               href={`tel:${t.brand.phone}`} 
               className="hover:text-[#D4AF37] transition-colors flex items-center"
             >
-              <Phone className="w-3 h-3 mr-1" />
+              <Phone className="w-3 h-3 mr-1 text-[#D4AF37]" />
               {t.brand.phone}
             </a>
-            <span className="text-[#C5A880]/30">|</span>
-            <span className="text-[#D4AF37]/90 italic">
-              {lang === 'en' ? "Exclusive Fabrics & Sharee Atelier" : "विशिष्ट कपडा तथा सारी बुटिक"}
-            </span>
           </div>
         </div>
 
@@ -180,6 +186,14 @@ export default function Header({ lang, setLang, t }) {
             >
               <Phone className="w-3.5 h-3.5 text-[#D4AF37]" />
               <span>{t.brand.phone} (Zero Km, Pokhara)</span>
+            </a>
+
+            <a
+              href={`mailto:${t.brand.email}`}
+              className="w-full flex items-center justify-center space-x-2 py-2 rounded-xl bg-white/5 border border-white/10 text-[#D4AF37] text-xs hover:border-[#D4AF37]/50 transition-colors"
+            >
+              <Mail className="w-3.5 h-3.5 text-[#D4AF37]" />
+              <span>{t.brand.email}</span>
             </a>
           </div>
         </div>
