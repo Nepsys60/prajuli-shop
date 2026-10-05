@@ -1,0 +1,85 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: 'Cormorant Garamond', 'Mukta', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', 'Mukta', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-nepali: 'Mukta', 'Plus Jakarta Sans', sans-serif;
+
+  --color-gold-200: #f5e8c7;
+  --color-gold-300: #e8d39e;
+  --color-gold-400: #d4af37;
+  --color-gold-500: #c5a880;
+  --color-gold-600: #a8885b;
+  --color-gold-700: #82663e;
+  
+  --color-dark-950: #07080b;
+  --color-dark-900: #0d0f14;
+  --color-dark-850: #13161f;
+  --color-dark-800: #1a1e29;
+  --color-dark-700: #262b3a;
+
+  --color-ivory: #faf7f2;
+  --color-sand: #e6dfd5;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    background-color: #08090c;
+    color: #ded9cd;
+    overflow-x: hidden;
+  }
+  
+  h1, h2, h3, .font-serif {
+    font-family: var(--font-serif);
+  }
+}
+
+/* Luxury Gold Text Gradient */
+.gold-gradient-text {
+  background: linear-gradient(135deg, #fff2d6 0%, #d4af37 50%, #b88f48 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-gradient-bg {
+  background: linear-gradient(135deg, #c5a880 0%, #b38f4d 50%, #8f6e32 100%);
+}
+
+.gold-border-glow {
+  box-shadow: 0 0 25px -5px rgba(212, 175, 55, 0.25);
+}
+
+.gold-subtle-border {
+  border: 1px solid rgba(197, 168, 128, 0.25);
+}
+
+/* Glassmorphism */
+.glass-panel {
+  background: rgba(19, 22, 31, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.glass-header {
+  background: rgba(11, 13, 18, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(197, 168, 128, 0.15);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #08090c;
+}
+::-webkit-scrollbar-thumb {
+  background: #2a2c35;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #c5a880;
+}
